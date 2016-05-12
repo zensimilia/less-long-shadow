@@ -45,12 +45,13 @@ Have a bug or a feature request? [Please open a new issue](https://github.com/ze
 ## TODO
 
 - [ ] Correctly implement spread transparency.
+- [x] Add support for shadows on SVG.
 - [x] Add ability to specify an angle of shadow.
 
 ## Changelog
 
 __2.1.0__
-* Add support for shadows on SVG.
+* Add support for shadows on SVG by [Randall Bruder](https://github.com/randybruder).
 
 __2.0.0__
 * __INCOMPATIBLE CHANGES!__ Add _namespace_ and rename mixins.
