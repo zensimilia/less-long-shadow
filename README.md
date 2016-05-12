@@ -1,6 +1,6 @@
 # LESS Long Shadow
 
-This [LESS](http://lesscss.org/) loop mixins generates trendy flat long shadow with any angle for inline text, font icons and block elements. Looks best if wrapped by square `overflow: hidden;` container with _bold_ padding and rounded corners. Dont forget about good contrast color palette. Enjoy!
+This [LESS](http://lesscss.org/) loop mixins generates trendy flat long shadow with any angle for inline text, font icons, block elements and SVGs. Looks best if wrapped by square `overflow: hidden;` container with _bold_ padding and rounded corners. Dont forget about good contrast color palette. Enjoy!
 
 * Source: [GitHub](https://github.com/zensimilia/less-long-shadow)
 * Demo: [CodePen](http://codepen.io/zensimilia/full/XbVgNx/)
@@ -20,6 +20,7 @@ This [LESS](http://lesscss.org/) loop mixins generates trendy flat long shadow w
 .someClass {
     #long-shadow.inline(@color, @angle, @size); // For text or icon
     #long-shadow.block(@color, @angle, @size, @prefix); // For container
+    #long-shadow.svg(@color, @angle, @size, @prefix); // For SVG
 }
 ```
 
@@ -31,7 +32,7 @@ This [LESS](http://lesscss.org/) loop mixins generates trendy flat long shadow w
   * Default `45`.
 * __@size__ that shadow length would be:
   * Default `10`.
-* __@prefix__ param define the use of CSS _browser-prefixes_ for `box-shadow` rule:
+* __@prefix__ param define the use of CSS _browser-prefixes_ for `box-shadow` or `filter` rule:
   * `0` : _false_
   * `1` : _true_ Default
 
@@ -47,6 +48,9 @@ Have a bug or a feature request? [Please open a new issue](https://github.com/ze
 - [x] Add ability to specify an angle of shadow.
 
 ## Changelog
+
+__2.1.0__
+* Add support for shadows on SVG.
 
 __2.0.0__
 * __INCOMPATIBLE CHANGES!__ Add _namespace_ and rename mixins.
