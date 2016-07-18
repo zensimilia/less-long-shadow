@@ -50,6 +50,9 @@ Have a bug or a feature request? [Please open a new issue](https://github.com/ze
 
 ## Changelog
 
+__2.1.1__
+* Fix default color var. Thanx to [Sergey Pimenov](https://github.com/olton).
+
 __2.1.0__
 * Add support for shadows on SVG by [Randall Bruder](https://github.com/randybruder).
 

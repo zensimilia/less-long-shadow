@@ -8,6 +8,7 @@
 *
 * #long-shadow.inline(@color, @angle, @size);
 * #long-shadow.block(@color, @angle, @size, @prefix);
+* #long-shadow.svg(@color, @angle, @size, @prefix);
 */
 
 #long-shadow {
@@ -27,7 +28,7 @@
         .inline(@color, @angle, @size - 1,@flag + 1, @close);
     }
 
-    .block(@color: @CCCCCC, @angle: 45, @size: 10, @prefix: 1, @flag: 1, @temp: "") when (@size > 0) {
+    .block(@color: #CCCCCC, @angle: 45, @size: 10, @prefix: 1, @flag: 1, @temp: "") when (@size > 0) {
         @angle360: @angle * (pi() / 180);
         @x: round(@flag * cos(@angle360));
         @y: round(@flag * sin(@angle360));
@@ -48,23 +49,23 @@
         .loopPrefix(@alltogether, @size - 1);
         .block(@color, @angle, @size - 1, @prefix, @flag + 1, @close);
     }
-    
-    .svg(@color: @CCCCCC, @angle: 45, @size: 10, @prefix: 1, @flag: 1, @temp: "") when (@size > 0) {
+
+    .svg(@color: #CCCCCC, @angle: 45, @size: 10, @prefix: 1, @flag: 1, @temp: "") when (@size > 0) {
         @angle360: @angle * (pi() / 180);
         @x: round(@flag * cos(@angle360));
         @y: round(@flag * sin(@angle360));
         @shadow: ~"@{x}px @{y}px 0px @{color}";
         @close: ~"@{shadow}) drop-shadow(@{temp}";
         @alltogether: ~"drop-shadow(@{close} 0px 0px 0px @{color})";
-    
+
         .loop(@string, @index) when (@index < 1) {
             filter: @string;
         }
-    
+
         .loopPrefix(@string, @index) when (@index < 1) and (@prefix > 0) {
             -webkit-filter: @string;
         }
-    
+
         .loop(@alltogether, @size - 1);
         .loopPrefix(@alltogether, @size - 1);
         .svg(@color, @angle, @size - 1, @prefix, @flag + 1, @close);
