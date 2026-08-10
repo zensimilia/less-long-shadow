@@ -1,3 +1,5 @@
+
+
 # LESS Long Shadow
 
 This [LESS](http://lesscss.org/) loop mixins generates trendy flat long shadow with any angle for inline text, font icons, block elements and SVGs. Looks best if wrapped by square `overflow: hidden;` container with _bold_ padding and rounded corners. Dont forget about good contrast color palette. Enjoy!
@@ -8,7 +10,7 @@ This [LESS](http://lesscss.org/) loop mixins generates trendy flat long shadow w
 
 ## Installation
 
-1. Make shure that you [installed](http://lesscss.org/) client or server-side LESS css-preprocessor
+1. Make sure that you [installed](http://lesscss.org/) client or server-side LESS css-preprocessor
 2. [Clone git repo](https://github.com/zensimilia/less-long-shadow/fork) or [Download](https://github.com/zensimilia/less-long-shadow/archive/master.zip) and copy `long-shadow.less` to your _e.g._ `/assets/less` directory
 3. Plug it to project by insert `@import "long-shadow.less";` at beginning of main LESS/CSS stylesheet file
 4. Assign mixins to elements rules.
